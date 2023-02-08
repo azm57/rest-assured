@@ -50,4 +50,3 @@ public class CookiesWork {
 		System.out.println(headers);
 	}
 }
-//for sample commit
