@@ -17,7 +17,7 @@ public class CookiesWork {
 
 				.when().get("https://google.com")
 
-				.then().statusCode(200).cookie("AEC").log();
+				.then().statusCode(200).cookie("AEC").log().all();
 	}
 
 	@Test
