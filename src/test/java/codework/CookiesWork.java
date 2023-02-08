@@ -29,27 +29,23 @@ public class CookiesWork {
 		Map<String, String> hm = re.getCookies();
 		System.out.println("value of cookie is " + hm.values());
 	}
-	
+
 	@Test
 	public void testHeaders() {
 		given()
-		
-		.when()
-			.get("https://google.com")
-			
-		.then()
-			.header("Content-Type","text/html; charset=ISO-8859-1")
-			.header("Content-Encoding", "gzip")
-		.log().all();
+
+				.when().get("https://google.com")
+
+				.then().header("Content-Type", "text/html; charset=ISO-8859-1").header("Content-Encoding", "gzip").log()
+				.all();
 	}
-	
+
 	@Test
 	public void getTestHeaders() {
 		Response res = given()
-		
-		.when()
-			.get("https://google.com");
-		
+
+				.when().get("https://google.com");
+
 		Headers headers = res.getHeaders();
 		System.out.println(headers);
 	}
